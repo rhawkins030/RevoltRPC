@@ -1,0 +1,19 @@
+{
+  "name": "revoltrpc",
+  "version": "1.0.0",
+  "description": "node application that creates rich presences for users on revolt",
+  "main": "index.js",
+  "scripts": {
+    "test": "ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "express": "^4.21.1",
+    "revolt.js": "^7.0.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "revoltUser": {
+        "email": "email@here.com",
+        "password": "your-secure-password"
+    },
+    "useStatus": true,
+    "preStatus": "status that is set before game detects",
+    "useAPI": false
+}
