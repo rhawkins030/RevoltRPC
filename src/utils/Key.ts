@@ -5,7 +5,7 @@ class Key {
     private key: string;
     private baseDir: string;
 
-    constructor(key: string, baseDir: string = path.join(process.cwd(), "data", "servers")) {
+    constructor(key: string, baseDir: string = path.join(process.cwd(), "data")) {
         this.key = key;
         this.baseDir = baseDir;
 
@@ -22,7 +22,7 @@ class Key {
 
     // Get the full path to the key's file
     private keyFilePath(): string {
-        return path.join(`${this.key}.txt`);
+        return path.join(this.baseDir, `${this.key}.txt`);
     }
 
     // Get the value of the key

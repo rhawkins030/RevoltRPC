@@ -6,7 +6,7 @@ import { RevoltAPI } from "../globals";
  * @param data - Data to send through API, has to be in JSON.
  * @param sessionCode - Send a session code, required for protected calls.
  */
-export async function FromAPI(path: string, data?: JSON, sessionCode?: string) : Promise<any> {
+export async function FromAPI(path: string, data?: any, sessionCode?: string) : Promise<any> {
     const url = `${RevoltAPI}${path}`
     let headers: Record<string, string> = {
         "Content-Type": "application/json"
