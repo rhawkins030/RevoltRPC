@@ -2,7 +2,7 @@
 
 import { sessionKey } from ".";
 import { FromAPI } from "./RevoltFlux/utils/fetch";
-import { LoginBody, LoginResponse, UserInfo } from "./utils/Types";
+import { LoginBody, LoginResponse, Status, UserInfo } from "./utils/Types";
 
 export async function LoginRevolt(email: string, password: string) : Promise<boolean> {
     const template: LoginBody = {
@@ -18,8 +18,23 @@ export async function LoginRevolt(email: string, password: string) : Promise<boo
 
         const uDat = await FromAPI("/users/@me", undefined, dat.token) as UserInfo;
         console.log(`Logged in as ${uDat.username}`)
+        
         return true;
     } else {
         return false;
     }
+}
+
+export async function setStatus(status: string) {
+    let statusTemplate: Status = {
+        
+    }
+    const session = sessionKey.get() || "";
+    const dat = await FromAPI("/users/@me", undefined, session) as UserInfo;
+
+    statusTemplate = dat.status || {};
+
+    statusTemplate.text = status;
+
+    await FromAPI("/users/@me", {status: statusTemplate}, session, "PATCH");
 }

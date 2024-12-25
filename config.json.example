@@ -4,6 +4,5 @@
         "password": "your-secure-password"
     },
     "useStatus": true,
-    "preStatus": "status that is set before game detects",
-    "useAPI": false
+    "preStatus": "check out RevoltRPC!"
 }

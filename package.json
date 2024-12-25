@@ -12,8 +12,13 @@
   "dependencies": {
     "@types/express": "^5.0.0",
     "express": "^4.21.1",
+    "process-exists": "^5.0.0",
+    "ps-node": "^0.1.6",
     "revolt.js": "^7.0.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "@types/ps-node": "^0.1.3"
   }
 }
